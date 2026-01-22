@@ -1,18 +1,17 @@
 // import { placeholderImages } from "../public/placeholder-images";
-import {placeholderImages} from "../../public/placeholder-images"
+import { placeholderImages } from "../../public/placeholder-images";
 
 export const products = [
   {
     id: 1,
-    name: "Royal Blossom Collection",
+    name: "Anant Bandhan",
     category: "Premium Printed",
-    price: "₹1,499 - ₹2,999",
-    description:
-      "Handcrafted with gold foil embossing and delicate floral patterns.",
+    price: "₹280 Per Card",
+    description: "Celebrate your love with beautifully designed wedding cards.",
     fullDescription:
-      "The Royal Blossom Collection features intricate hand-painted floral designs with 24K gold foil embossing. Each invitation is printed on 300 GSM premium card stock with velvet touch finish.",
+      "Celebrate love with our exquisitely designed wedding cards, crafted to reflect your unique journey. Whether you prefer traditional elegance or modern minimalism, our collection offers a wide range of customizable designs to suit every wedding theme.",
     features: [
-      "24K Gold Foil",
+      " Gold Foil",
       "Premium Card Stock",
       "Hand-painted Designs",
       "Matching Envelopes",
@@ -35,15 +34,15 @@ export const products = [
   },
   {
     id: 2,
-    name: "Modern Minimalist Suite",
+    name: "Modern Vivah Sutra",
     category: "Contemporary",
-    price: "₹899 - ₹1,799",
+    price: "₹90 Per Card",
     description:
-      "Clean lines, elegant typography, and sophisticated color palette.",
+      "wedding cards crafted to make your special day unforgettable.",
     fullDescription:
-      "Our Modern Minimalist Suite combines sleek design with premium materials. Featuring custom typography and laser-cut details.",
+      "Celebrate love with our exquisitely designed wedding cards, crafted to reflect your unique journey. Whether you prefer traditional elegance or modern minimalism, our collection offers a wide range of customizable designs to suit every wedding theme.",
     features: [
-      "Laser-cut Details",
+      "Laser-cut ",
       "Custom Typography",
       "Matte Finish",
       "Fast Turnaround",
@@ -61,13 +60,13 @@ export const products = [
   },
   {
     id: 3,
-    name: "Destination Wedding Elegance",
+    name: "Riwaaz Wed Card",
     category: "Destination",
-    price: "₹1,999 - ₹3,499",
+    price: "₹110 Per Card",
     description:
-      "Capture the essence of exotic locations with thematic designs.",
+      "wedding invitations with premium print quality.",
     fullDescription:
-      "Inspired by exotic destinations from Bali to Tuscany. Each design tells a story with thematic elements and textured papers.",
+      "Celebrate love with our exquisitely designed wedding cards, crafted to reflect your unique journey. Whether you prefer traditional elegance or modern minimalism, our collection offers a wide range of customizable designs to suit every wedding theme.",
     features: [
       "Thematic Designs",
       "Textured Papers",
@@ -89,11 +88,11 @@ export const products = [
     id: 4,
     name: "Royal Vows",
     category: "Dream Wedding Card",
-    price: "₹1,999 - ₹3,499",
+    price: "₹110 Per Card",
     description:
-      "Capture the essence of exotic locations with thematic designs.",
+      "Custom wedding cards that reflect your love story in style.",
     fullDescription:
-      "Inspired by exotic destinations from Bali to Tuscany. Each design tells a story with thematic elements and textured papers.",
+      "Celebrate love with our exquisitely designed wedding cards, crafted to reflect your unique journey. Whether you prefer traditional elegance or modern minimalism, our collection offers a wide range of customizable designs to suit every wedding theme.",
     features: [
       "Thematic Designs",
       "Textured Papers",
@@ -114,13 +113,13 @@ export const products = [
 
   {
     id: 5,
-    name: "Luxury FArman Wedding Card",
+    name: "Farman Card",
     category: "Farman Card",
-    price: "₹1,999 - ₹3,499",
+    price: "₹149 er Card",
     description:
-      "Capture the essence of exotic locations with thematic designs.",
+      "Timeless wedding invitation designs with a modern touch.",
     fullDescription:
-      "Inspired by exotic destinations from Bali to Tuscany. Each design tells a story with thematic elements and textured papers.",
+      "Announce your big day with elegance and tradition through our Farman Wedding Card A4 Size – a regal scroll-style invitation that adds a royal touch to your wedding,Inspired by royal proclamations, this card is designed to impress and express your cultural heritage in the most luxurious way.",
     features: [
       "Thematic Designs",
       "Textured Papers",
@@ -142,11 +141,11 @@ export const products = [
     id: 6,
     name: "Royal Wedding Card",
     category: "Royal Card",
-    price: "₹1,999 - ₹3,499",
+    price: "₹220 Per Card",
     description:
-      "Capture the essence of exotic locations with thematic designs.",
+      "Luxury wedding cards printed with precision and elegance.",
     fullDescription:
-      "Inspired by exotic destinations from Bali to Tuscany. Each design tells a story with thematic elements and textured papers.",
+      "Celebrate love with our exquisitely designed wedding cards, crafted to reflect your unique journey. Whether you prefer traditional elegance or modern minimalism, our collection offers a wide range of customizable designs to suit every wedding theme.",
     features: [
       "Thematic Designs",
       "Textured Papers",
@@ -166,13 +165,13 @@ export const products = [
   },
   {
     id: 7,
-    name: "Premium God Foil Card",
+    name: "Gold Effected Wedding  Card",
     category: "Gold Foil",
-    price: "₹1,999 - ₹3,499",
+    price: "₹480 Per Card",
     description:
-      "Capture the essence of exotic locations with thematic designs.",
+      "Classic to contemporary wedding card designs, printed flawlessly.",
     fullDescription:
-      "Inspired by exotic destinations from Bali to Tuscany. Each design tells a story with thematic elements and textured papers.",
+      "Celebrate love with our exquisitely designed wedding cards, crafted to reflect your unique journey. Whether you prefer traditional elegance or modern minimalism, our collection offers a wide range of customizable designs to suit every wedding theme.",
     features: [
       "Thematic Designs",
       "Textured Papers",
@@ -196,11 +195,11 @@ export const products = [
     id: 8,
     name: "Classic Wedding Card",
     category: "Classic Card",
-    price: "₹1,999 - ₹3,499",
+    price: "₹230 Per Card",
     description:
-      "Capture the essence of exotic locations with thematic designs.",
+      "High-quality wedding card printing that speaks elegance and love.",
     fullDescription:
-      "Inspired by exotic destinations from Bali to Tuscany. Each design tells a story with thematic elements and textured papers.",
+      "Celebrate love with our exquisitely designed wedding cards, crafted to reflect your unique journey. Whether you prefer traditional elegance or modern minimalism, our collection offers a wide range of customizable designs to suit every wedding theme.",
     features: [
       "Thematic Designs",
       "Textured Papers",
@@ -211,8 +210,7 @@ export const products = [
       placeholderImages.products["Classic-1"],
       placeholderImages.products["Classic-2"],
       placeholderImages.products["Classic-3"],
-            placeholderImages.products["Classic-4"],
-
+      placeholderImages.products["Classic-4"],
     ],
     pdfPreview:
       "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
@@ -220,15 +218,15 @@ export const products = [
     deliveryTime: "10-14 business days",
     tags: ["destination", "luxury", "thematic"],
   },
-    {
+  {
     id: 9,
     name: "Matellic Wedding Card",
     category: "Matellic Card",
-    price: "₹1,999 - ₹3,499",
+    price: "₹245 Per Card",
     description:
-      "Capture the essence of exotic locations with thematic designs.",
+      "Exquisite wedding invitation designs made to cherish forever.",
     fullDescription:
-      "Inspired by exotic destinations from Bali to Tuscany. Each design tells a story with thematic elements and textured papers.",
+      "Celebrate love with our exquisitely designed wedding cards, crafted to reflect your unique journey. Whether you prefer traditional elegance or modern minimalism, our collection offers a wide range of customizable designs to suit every wedding theme.",
     features: [
       "Thematic Designs",
       "Textured Papers",
@@ -239,8 +237,7 @@ export const products = [
       placeholderImages.products["matellic-1"],
       placeholderImages.products["matellic-2"],
       placeholderImages.products["matellic-3"],
-            placeholderImages.products["matellic-4"],
-
+      placeholderImages.products["matellic-4"],
     ],
     pdfPreview:
       "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
@@ -248,7 +245,7 @@ export const products = [
     deliveryTime: "10-14 business days",
     tags: ["destination", "luxury", "thematic"],
   },
-    {
+  {
     id: 10,
     name: "Premium God Foil Card",
     category: "Gold Foil",
@@ -275,7 +272,6 @@ export const products = [
     deliveryTime: "10-14 business days",
     tags: ["destination", "luxury", "thematic"],
   },
- 
 ];
 
 export const galleryImages = [

@@ -220,7 +220,7 @@ const WeddingStationeryCatalogue = () => {
       {/* Hero Section */}
       <div className="relative py-20 bg-gradient-to-br from-luxury-blush via-white to-luxury-champagne">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-luxury-navy mb-6">
             Complete Wedding Stationery Collection
           </h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
@@ -286,7 +286,7 @@ const WeddingStationeryCatalogue = () => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Selected Items Bar */}
         {selectedItems.length > 0 && (
-          <div className="mb-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow">
+          <div className="mb-6 p-4 bg-gradient-to-br from-luxury-blush via-white to-luxury-champagne rounded-xl shadow">
             <div className="flex items-center justify-between">
               <div>
                 <div className="font-bold text-lg">
@@ -301,7 +301,7 @@ const WeddingStationeryCatalogue = () => {
               </div>
               <button
                 onClick={handleBulkOrder}
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2"
+                className="bg-gradient-to-r from-luxury-gold to-luxury-rosegold text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
                 Order All via WhatsApp
@@ -431,7 +431,7 @@ const WeddingStationeryCatalogue = () => {
               );
               window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
             }}
-            className="bg-white text-yellow-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors inline-flex items-center gap-3"
+            className=" bg-gradient-to-r from-luxury-gold to-luxury-rosegold text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-colors inline-flex items-center gap-3"
           >
             <MessageCircle className="w-6 h-6" />
             Chat for Custom Package

@@ -156,48 +156,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Your Existing Hero Section - Commented out since carousel replaces it */}
-      {/* 
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-luxury-blush via-white to-luxury-champagne"   />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Sparkles className="w-16 h-16 text-luxury-gold mx-auto mb-6" />
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-luxury-navy mb-6">
-              Your Love Story, <span className="text-luxury-rosegold">Beautifully Told</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-              Premium wedding cards and elegant digital invitations that capture the magic of your special day.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/products"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-luxury-gold to-luxury-rosegold text-white rounded-full text-lg font-semibold hover:shadow-xl"
-              >
-                Explore Collections
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              
-              <a
-                href={`https://wa.me/${config.whatsapp.number}?text=${encodeURIComponent(config.whatsapp.defaultMessage)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-luxury-gold text-luxury-gold rounded-full text-lg font-semibold hover:bg-luxury-gold hover:text-white"
-              >
-                Get Custom Quote
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      */}
-
+     
       {/* Featured Products - Your existing section remains */}
       <section className="py-20 bg-white">
         <div className="max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,10 +1,15 @@
-// pages/EInvitations.js - NEW VERSION
 import { useState } from "react";
-import { Play, Smartphone, Users, Download, BarChart,ShoppingBag } from "lucide-react";
+import {
+  Play,
+  Smartphone,
+  Users,
+  Download,
+  BarChart,
+  ShoppingBag,
+} from "lucide-react";
 import ProductCard from "../components/common/ProductCard";
 
 const EInvitations = () => {
-  // E-INVITATION LOCAL VIDEOS (Yeh alag array banayein)
   const eInvitationVideos = [
     {
       id: 1,
@@ -70,7 +75,7 @@ const EInvitations = () => {
       videoPath: "videos/Dig-Invitation (8).mp4",
       thumbnail: "/images/thumbnail/8.png",
     },
-    
+
     {
       id: 9,
       title: "Royal Traditional E-Invite",
@@ -106,7 +111,7 @@ const EInvitations = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-pink-50 to-purple-50 py-20 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-luxury-navy mb-6">
           Digital E-Invitations
         </h1>
         <p className="text-gray-600 mt-4">
@@ -156,7 +161,7 @@ const EInvitations = () => {
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-luxury-gold to-luxury-rosegold text-white py-2 rounded-lg hover:opacity-90"
                   >
-              <ShoppingBag className="w-4 h-4" />
+                    <ShoppingBag className="w-4 h-4" />
                     Order on WhatsApp
                   </a>
                 </div>

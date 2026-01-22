@@ -34,7 +34,7 @@ const WeddingItineraryHamper = () => {
         { time: "Day 3 - Morning", event: "Baraat & Wedding", icon: "🐎" },
         { time: "Day 3 - Evening", event: "Reception", icon: "🎉" },
       ],
-      description: "Complete traditional Indian wedding schedule"
+      description: "Complete traditional Indian wedding schedule",
     },
     {
       id: "modern",
@@ -46,7 +46,7 @@ const WeddingItineraryHamper = () => {
         { time: "Day 2 - Afternoon", event: "Cocktail Hour", icon: "🍸" },
         { time: "Day 2 - Evening", event: "Reception Party", icon: "🎊" },
       ],
-      description: "Contemporary wedding with modern elements"
+      description: "Contemporary wedding with modern elements",
     },
     {
       id: "destination",
@@ -58,8 +58,8 @@ const WeddingItineraryHamper = () => {
         { time: "Day 3", event: "Cultural Night", icon: "🌺" },
         { time: "Day 4", event: "Farewell Brunch", icon: "🥂" },
       ],
-      description: "Exotic destination wedding itinerary"
-    }
+      description: "Exotic destination wedding itinerary",
+    },
   ];
 
   // Hamper Packages
@@ -72,10 +72,10 @@ const WeddingItineraryHamper = () => {
         "Personalized Thank You Notes",
         "Customized Matchboxes",
         "Elegant Ribbons",
-        "Basic Packaging"
+        "Basic Packaging",
       ],
       bestFor: "Small gatherings",
-      image: "/images/hampers/basic.jpg"
+      image: "/images/hampers/basic.jpg",
     },
     {
       id: "premium",
@@ -87,11 +87,11 @@ const WeddingItineraryHamper = () => {
         "Scented Candles",
         "Silk Ribbons",
         "Custom Gift Boxes",
-        "Handwritten Notes"
+        "Handwritten Notes",
       ],
       bestFor: "Medium to large weddings",
       image: "/images/hampers/premium.jpg",
-      popular: true
+      popular: true,
     },
     {
       id: "luxury",
@@ -104,58 +104,77 @@ const WeddingItineraryHamper = () => {
         "Custom Photo Frames",
         "Luxury Wrapping",
         "Delivery Coordination",
-        "VIP Tags"
+        "VIP Tags",
       ],
       bestFor: "Grand celebrations",
-      image: "/images/hampers/luxury.jpg"
-    }
+      image: "/images/hampers/luxury.jpg",
+    },
   ];
 
   // Additional Hamper Items
   const additionalItems = [
     { id: 1, name: "Personalized Mithai Box", price: "₹499", category: "food" },
-    { id: 2, name: "Customized Photo Album", price: "₹799", category: "memories" },
+    {
+      id: 2,
+      name: "Customized Photo Album",
+      price: "₹799",
+      category: "memories",
+    },
     { id: 3, name: "Scented Candle Set", price: "₹699", category: "decor" },
     { id: 4, name: "Handmade Soaps", price: "₹399", category: "personal" },
-    { id: 5, name: "Mini Champagne Bottles", price: "₹899", category: "drinks" },
+    {
+      id: 5,
+      name: "Mini Champagne Bottles",
+      price: "₹899",
+      category: "drinks",
+    },
     { id: 6, name: "Custom Coasters", price: "₹299", category: "utility" },
   ];
 
   const calculateTotal = () => {
-    const hamperPrice = parseInt(hamperPackages.find(h => h.id === selectedPackage)?.price.replace(/[^0-9]/g, '') || 0);
+    const hamperPrice = parseInt(
+      hamperPackages
+        .find((h) => h.id === selectedPackage)
+        ?.price.replace(/[^0-9]/g, "") || 0,
+    );
     const additionalPrice = selectedHampers.reduce((sum, item) => {
-      const price = parseInt(item.price.replace(/[^0-9]/g, ''));
+      const price = parseInt(item.price.replace(/[^0-9]/g, ""));
       return sum + price;
     }, 0);
     return hamperPrice + additionalPrice;
   };
 
   const handleWhatsAppOrder = () => {
-    const selectedHamper = hamperPackages.find(h => h.id === selectedPackage);
-    const selectedItineraryTemplate = itineraryTemplates.find(i => selectedItinerary.includes(i.id));
-    
+    const selectedHamper = hamperPackages.find((h) => h.id === selectedPackage);
+    const selectedItineraryTemplate = itineraryTemplates.find((i) =>
+      selectedItinerary.includes(i.id),
+    );
+
     let message = "Hello! I would like to order:\n\n";
-    
+
     if (selectedItineraryTemplate) {
       message += `📅 *Itinerary Package:* ${selectedItineraryTemplate.name}\n`;
       message += `⏰ Duration: ${selectedItineraryTemplate.duration}\n\n`;
     }
-    
+
     message += `🎁 *Hamper Package:* ${selectedHamper.name}\n`;
     message += `💰 Price: ${selectedHamper.price}\n\n`;
-    
+
     if (selectedHampers.length > 0) {
       message += `➕ *Additional Items:*\n`;
-      selectedHampers.forEach(item => {
+      selectedHampers.forEach((item) => {
         message += `• ${item.name} - ${item.price}\n`;
       });
       message += `\n`;
     }
-    
+
     message += `💰 *Total Estimated:* ₹${calculateTotal()}\n\n`;
     message += `Please contact me to discuss customization options!`;
-    
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      "_blank",
+    );
   };
 
   return (
@@ -167,11 +186,12 @@ const WeddingItineraryHamper = () => {
             <Calendar className="w-8 h-8" />
             <Gift className="w-8 h-8" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-luxury-navy mb-6">
             Wedding Itinerary & Gift Hamper Combo
           </h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Plan your perfect wedding schedule and delight your guests with beautiful gift hampers
+            Plan your perfect wedding schedule and delight your guests with
+            beautiful gift hampers
           </p>
         </div>
       </div>
@@ -183,27 +203,35 @@ const WeddingItineraryHamper = () => {
             <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
               <div className="flex items-center gap-3 mb-6">
                 <Calendar className="w-8 h-8 text-blue-600" />
-                <h2 className="text-2xl font-bold">Wedding Itinerary Planning</h2>
+                <h2 className="text-2xl font-bold">
+                  Wedding Itinerary Planning
+                </h2>
               </div>
-              
+
               <p className="text-gray-600 mb-8">
-                Choose from our expertly crafted wedding timelines or customize your own
+                Choose from our expertly crafted wedding timelines or customize
+                your own
               </p>
 
               {/* Itinerary Templates */}
               <div className="space-y-4 mb-8">
                 <h3 className="font-bold text-lg mb-4">Select Template</h3>
-                {itineraryTemplates.map(template => (
+                {itineraryTemplates.map((template) => (
                   <div
                     key={template.id}
                     onClick={() => {
                       if (selectedItinerary.includes(template.id)) {
-                        setSelectedItinerary(selectedItinerary.filter(id => id !== template.id));
+                        setSelectedItinerary(
+                          selectedItinerary.filter((id) => id !== template.id),
+                        );
                       } else {
-                        setSelectedItinerary([...selectedItinerary, template.id]);
+                        setSelectedItinerary([
+                          ...selectedItinerary,
+                          template.id,
+                        ]);
                       }
                     }}
-                    className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${selectedItinerary.includes(template.id) ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-blue-300'}`}
+                    className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${selectedItinerary.includes(template.id) ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-blue-300"}`}
                   >
                     <div className="flex justify-between items-start mb-4">
                       <div>
@@ -215,14 +243,19 @@ const WeddingItineraryHamper = () => {
                         <span className="font-medium">{template.duration}</span>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-3">
                       {template.events.map((event, idx) => (
-                        <div key={idx} className="flex items-center gap-3 text-gray-700">
+                        <div
+                          key={idx}
+                          className="flex items-center gap-3 text-gray-700"
+                        >
                           <span className="text-2xl">{event.icon}</span>
                           <div>
                             <div className="font-medium">{event.event}</div>
-                            <div className="text-sm text-gray-500">{event.time}</div>
+                            <div className="text-sm text-gray-500">
+                              {event.time}
+                            </div>
                           </div>
                         </div>
                       ))}
@@ -233,7 +266,9 @@ const WeddingItineraryHamper = () => {
 
               {/* Customization Options */}
               <div className="bg-blue-50 rounded-xl p-6">
-                <h3 className="font-bold text-lg mb-4">Customize Your Itinerary</h3>
+                <h3 className="font-bold text-lg mb-4">
+                  Customize Your Itinerary
+                </h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { icon: <Music />, label: "Music & Entertainment" },
@@ -241,7 +276,10 @@ const WeddingItineraryHamper = () => {
                     { icon: <ChefHat />, label: "Food & Beverage" },
                     { icon: <Users />, label: "Guest Management" },
                   ].map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-3 p-3 bg-white rounded-lg">
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 p-3 bg-white rounded-lg"
+                    >
                       <div className="text-blue-600">{item.icon}</div>
                       <span className="text-sm">{item.label}</span>
                     </div>
@@ -262,11 +300,11 @@ const WeddingItineraryHamper = () => {
               {/* Hamper Packages */}
               <div className="space-y-6 mb-8">
                 <h3 className="font-bold text-lg">Choose Hamper Package</h3>
-                {hamperPackages.map(pkg => (
+                {hamperPackages.map((pkg) => (
                   <div
                     key={pkg.id}
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${selectedPackage === pkg.id ? 'border-purple-500 bg-purple-50' : 'border-gray-200 hover:border-purple-300'}`}
+                    className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${selectedPackage === pkg.id ? "border-purple-500 bg-purple-50" : "border-gray-200 hover:border-purple-300"}`}
                   >
                     <div className="flex justify-between items-start mb-4">
                       <div>
@@ -281,16 +319,21 @@ const WeddingItineraryHamper = () => {
                         <div className="text-2xl font-bold text-purple-600 mb-2">
                           {pkg.price}
                         </div>
-                        <div className="text-gray-600">Best for: {pkg.bestFor}</div>
+                        <div className="text-gray-600">
+                          Best for: {pkg.bestFor}
+                        </div>
                       </div>
                       {selectedPackage === pkg.id && (
                         <CheckCircle className="w-6 h-6 text-green-500" />
                       )}
                     </div>
-                    
+
                     <ul className="space-y-2">
                       {pkg.items.map((item, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-gray-700">
+                        <li
+                          key={idx}
+                          className="flex items-center gap-2 text-gray-700"
+                        >
                           <Sparkles className="w-4 h-4 text-purple-400" />
                           {item}
                         </li>
@@ -304,22 +347,26 @@ const WeddingItineraryHamper = () => {
               <div className="mb-8">
                 <h3 className="font-bold text-lg mb-4">Add Extra Items</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {additionalItems.map(item => (
+                  {additionalItems.map((item) => (
                     <div
                       key={item.id}
                       onClick={() => {
-                        if (selectedHampers.find(h => h.id === item.id)) {
-                          setSelectedHampers(selectedHampers.filter(h => h.id !== item.id));
+                        if (selectedHampers.find((h) => h.id === item.id)) {
+                          setSelectedHampers(
+                            selectedHampers.filter((h) => h.id !== item.id),
+                          );
                         } else {
                           setSelectedHampers([...selectedHampers, item]);
                         }
                       }}
-                      className={`p-4 rounded-lg border cursor-pointer transition-all ${selectedHampers.find(h => h.id === item.id) ? 'border-green-500 bg-green-50' : 'border-gray-200 hover:border-gray-300'}`}
+                      className={`p-4 rounded-lg border cursor-pointer transition-all ${selectedHampers.find((h) => h.id === item.id) ? "border-green-500 bg-green-50" : "border-gray-200 hover:border-gray-300"}`}
                     >
                       <div className="flex justify-between items-center">
                         <div>
                           <div className="font-medium">{item.name}</div>
-                          <div className="text-sm text-gray-500">{item.category}</div>
+                          <div className="text-sm text-gray-500">
+                            {item.category}
+                          </div>
                         </div>
                         <div className="font-bold">{item.price}</div>
                       </div>
@@ -331,15 +378,19 @@ const WeddingItineraryHamper = () => {
 
             {/* Order Summary */}
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-white">
-              <h2 className="text-2xl font-bold mb-6 text-center">Your Combo Package</h2>
-              
+              <h2 className="text-2xl font-bold mb-6 text-center">
+                Your Combo Package
+              </h2>
+
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between items-center">
                   <div>
                     <div className="font-bold">Itinerary Planning</div>
                     <div className="text-sm opacity-80">
-                      {selectedItinerary.length > 0 
-                        ? itineraryTemplates.find(t => selectedItinerary.includes(t.id))?.name 
+                      {selectedItinerary.length > 0
+                        ? itineraryTemplates.find((t) =>
+                            selectedItinerary.includes(t.id),
+                          )?.name
                         : "Not selected"}
                     </div>
                   </div>
@@ -352,19 +403,28 @@ const WeddingItineraryHamper = () => {
                   <div>
                     <div className="font-bold">Gift Hamper</div>
                     <div className="text-sm opacity-80">
-                      {hamperPackages.find(h => h.id === selectedPackage)?.name}
+                      {
+                        hamperPackages.find((h) => h.id === selectedPackage)
+                          ?.name
+                      }
                     </div>
                   </div>
                   <div className="font-bold">
-                    {hamperPackages.find(h => h.id === selectedPackage)?.price}
+                    {
+                      hamperPackages.find((h) => h.id === selectedPackage)
+                        ?.price
+                    }
                   </div>
                 </div>
 
                 {selectedHampers.length > 0 && (
                   <div className="pt-4 border-t border-white/20">
                     <div className="font-bold mb-2">Additional Items</div>
-                    {selectedHampers.map(item => (
-                      <div key={item.id} className="flex justify-between text-sm mb-1">
+                    {selectedHampers.map((item) => (
+                      <div
+                        key={item.id}
+                        className="flex justify-between text-sm mb-1"
+                      >
                         <span>{item.name}</span>
                         <span>{item.price}</span>
                       </div>
@@ -389,7 +449,8 @@ const WeddingItineraryHamper = () => {
               </button>
 
               <p className="text-center text-sm opacity-80 mt-4">
-                Customization options available. Chat with us for personalized quotes!
+                Customization options available. Chat with us for personalized
+                quotes!
               </p>
             </div>
           </div>
